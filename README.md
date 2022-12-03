@@ -1,3 +1,3 @@
 # Clothing shop
 
-Description of project
+Тестовый проект по вёрстке
