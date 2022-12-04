@@ -1,0 +1,24 @@
+body{
+    width: 1920;
+    height: 4308;
+    margin-left: 375px;
+    margin-right: 360px;
+    margin-top: 50px;
+    font-family: 'Open Sans';
+    font-style: normal;
+
+}
+.nav {
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
+    column-gap: 65px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.07em; 
+}
+a{
+    text-decoration: none;
+    color: black;
+}
