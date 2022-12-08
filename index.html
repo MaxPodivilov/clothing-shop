@@ -168,7 +168,7 @@
       align-items: center;
       justify-content: left;
       width: 100%;
-      height: 40%;
+      height: 25%;
       transform: translateX(-15%); 
     }
     .bodywin{
@@ -179,7 +179,7 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      margin-top: 50px;
+      margin-top: 150px;
 
     }
     .zagwinter{
@@ -208,11 +208,134 @@
       box-shadow: none;
       border: 1px solid #000000 ;
     }
-    
+    .page-win {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+    }
+    .block3{
+      position: relative ;
+      display: flex;
+      justify-content: right;
+      /*background-image: url(assets/Vector2.svg);*/
+    }
+    .zagblock3{
+      position: relative;
+      width: 331px;
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 54px;
+      color: #373737;
+      row-gap: 30px;
+      margin-top: 100px;
+      margin-right: 100px;
+    }
+    .opblock3{
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 27px;
+      color: #373737;
+
+    }
+    .face3 {
+      position: relative;
+      top: -100px;
+      width: 403px;
+      background-image: url(assets/face3fon.svg);
+      background-position: right 100px top 110px;
+        }
+    .block4 {
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 100px;
+      
+    }
+    .zagblock4 {
+      width: 347px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 30px;
+      font-weight: 600;
+font-size: 40px;
+line-height: 54px;
+color: #373737;
+margin-top: 100px;
+    }
+    .opblock4{
+      font-weight: 400;
+font-size: 20px;
+line-height: 27px;
+color: #373737;
+    }
+    .last {
+      font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+letter-spacing: 0.12em;
+    }
+    .name{
+    width: 415px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 54px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .mag {
+      display: flex;
+      justify-content: center;
+      column-gap: 60px;
+    }
+    .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 11px;
+    }
+    .text {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 27px;
+      color: #000000;
+    }
+    .price {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 27px;
+      color: #C4C4C4;
+    }
+    .sale {
+      width: 177px;
+    }
+    .else {
+      width: 270px;
+      margin: 0% auto;
+      margin-top: 75px;
+    }
+    .footer {
+      position: relaaaabtive;
+      width: 1184px;
+      min-height: 100px;
+      margin: 0 auto;
+      background: #D9E3EF;
+    }
+    .back {
+      margin-left: 160px;
+    }
+    .fof {
+     column-gap: 5px;
+    }
+    .fotfon {
+      background: #D9E3EF;
+    }
   </style>
 </head>
 
-<body>
+<body> 
   <main class="content">
     <header class="header">
       <nav class="navigation">
@@ -242,7 +365,7 @@
       </div>
       <a class="link strelki" href="#"><img src="assets/strelka.svg" alt=""></a>
     </div>
-    <div class="page">
+    <div class="page-win">
       <div class="winter">
         <img src="assets/winter.svg" alt="">
       </div>
@@ -254,7 +377,73 @@
         </div>
       </div>
     </div>
+    <div class="page-win">
+      <div class="block3">
+        <div class="zagblock3">Коллекция<br>
+          на каждый день
+          <div class="opblock3">Полна легкости и простоты.
+            Удобная, уютная одежда сделает
+            каждый день чуточку приятнее,
+            веселее и свободнее.</div>
+        </div>
+        <img class="face3" src="assets/face3.png">
+      </div>
+    </div>
+    <div class="page-win">
+      <div class="block4">
+        <img class="face4" src="assets/face4.png">
+        <div class="zagblock4">Строгая 
+          коллекция
+          <div class="opblock4">Эллегантные платья, классические 
+            брючные костюмы добавят вам
+            и вашей фигуре больше шарма</div>
+          <div class="link button win last">Смотреть</div>
+        </div>
+      </div>
+    </div>
+    <div class="page-win"> 
+      <div class="name">Популярные товары</div>
+      <div class="mag">
+        <div class="box">
+          <img src="assets/1.jpg">
+          <p class="text">Рюкзак кантри</p>
+          <p class="price">2999</p>
+        </div>
+        <div class="box">
+          <img src="assets/2.jpg">
+          <p class="text">Туфли лакированные</p>
+          <p class="price">4999</p>
+        </div>
+        <div class="box">
+          <img src="assets/3.jpg">
+          <p class="text">Косметичка</p>
+          <p class="price">1999</p>
+          <div class="button link sale">Купить</div>
+        </div>
+        <div class="box">
+          <img src="assets/4.jpg">
+          <p class="text">Часы наручные</p>
+          <p class="price">5000</p>
+        </div>
+      </div>
+      <div class="link button win else">Смотреть ещё</div>
+    </div>
   </main>
+  <footer class="footer">
+    <nav class="navigation">
+      <div class="fotfon"></div>
+      <ul class="link-list fof">
+        <li><a href="/" class="link logo">Dolly</a></li>
+        <li><a href="#" class="link back">Доставка</a></li>
+        <li><a href="#" class="link">Оплата</a></li>
+        <li><a href="#" class="link">Контакты</a></li>
+        <li><a href="#" class="link">Вопросы</a></li>
+        <li><a href="#" class="link">Отзывы</a></li>
+        <li><a href="#" class="icon back"><img width="24" height="24" src="assets/insta.svg" /></a></li>
+        <li><a href="#" class="icon"><img width="24" height="24" src="assets/facebook.svg" /></a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 
 </html>
