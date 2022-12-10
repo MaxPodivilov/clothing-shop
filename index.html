@@ -179,7 +179,7 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      margin-top: 150px;
+      
 
     }
     .zagwinter{
@@ -211,13 +211,30 @@
     .page-win {
       position: relative;
       width: 100%;
-      height: 70vh;
+      margin-top: 150px;
     }
     .block3{
       position: relative ;
       display: flex;
       justify-content: right;
-      /*background-image: url(assets/Vector2.svg);*/
+    }
+    .pal {
+      position: absolute;
+      width: 3px;
+      height: 513px;
+      background-image: url(assets/Vector2.svg);
+      left: 200px;
+      bottom: 200px;
+      z-index: 2;
+    }
+    .d {
+      position: absolute;
+      background-image: url(assets/D.svg);
+      background-repeat: no-repeat;
+      width: 214px;
+      height: 393px;
+      left: -50px;
+      bottom: -200px;
     }
     .zagblock3{
       position: relative;
@@ -229,7 +246,7 @@
       line-height: 54px;
       color: #373737;
       row-gap: 30px;
-      margin-top: 100px;
+      margin-top: 50px;
       margin-right: 100px;
     }
     .opblock3{
@@ -242,10 +259,13 @@
     .face3 {
       position: relative;
       top: -100px;
-      width: 403px;
-      background-image: url(assets/face3fon.svg);
-      background-position: right 100px top 110px;
+      left: 50px; 
         }
+    .fon3 {
+      background-color: #F2F2F2;
+      margin-right: 100px;
+      height: 530px;
+    }
     .block4 {
       position: relative;
       display: flex;
@@ -312,25 +332,50 @@ letter-spacing: 0.12em;
       width: 177px;
     }
     .else {
-      width: 270px;
+      white-space: nowrap;
+      text-align: center;
       margin: 0% auto;
       margin-top: 75px;
+      width: auto;
+      display: flex;
+      margin-bottom: 193px;
     }
     .footer {
-      position: relaaaabtive;
-      width: 1184px;
-      min-height: 100px;
-      margin: 0 auto;
+      position: relative;
       background: #D9E3EF;
     }
     .back {
-      margin-left: 160px;
+      margin-left: 130px;
     }
     .fof {
      column-gap: 5px;
     }
-    .fotfon {
-      background: #D9E3EF;
+  
+    .ogr {
+      display: flex;
+      align-items: center;
+      width: 1184px;
+      min-height: 100px;
+      margin: 0 auto;
+    }
+    .karus {
+      position: relative;
+      display: flex;
+      column-gap: 5px;
+      margin-left: 100px;
+    }
+    .spisok {
+      width: 62px;
+      margin-left: 250px; 
+    }
+    .pal-two {
+      position: absolute;
+      width: 3px;
+      height: 276px;
+      background-image: url(assets/Vector2.svg);
+      left: 150px;
+      bottom: 320px;
+      z-index: 2;
     }
   </style>
 </head>
@@ -360,7 +405,7 @@ letter-spacing: 0.12em;
       </div>
       <div class="body">
         <div class="zag">Модная женская одежда
-          <a class="link button" href="#">Смотреть</a>
+          <button class="link button" href="#">Смотреть</button>
         </div>
       </div>
       <a class="link strelki" href="#"><img src="assets/strelka.svg" alt=""></a>
@@ -373,31 +418,40 @@ letter-spacing: 0.12em;
         <img class="face2" src="assets/face2.png" alt="">
         <div class="zagwinter">Зимний lookbook
           <div class="coll">Зимняя коллекция от лучших брендов</div>
-            <a class="link button win" href="#">Смотреть</a>
+            <button class="link button win" href="#">Смотреть</button>
         </div>
       </div>
     </div>
     <div class="page-win">
       <div class="block3">
+        <div class="pal"></div>
+        <div class="d"></div>
         <div class="zagblock3">Коллекция<br>
           на каждый день
           <div class="opblock3">Полна легкости и простоты.
             Удобная, уютная одежда сделает
             каждый день чуточку приятнее,
             веселее и свободнее.</div>
+          <div class="karus">
+            <div class="foto"><img src="assets/1face.png"> </div>
+            <div class="foto"><img src="assets/2face.png"> </div>
+            <div class="foto"><img src="assets/3face.png"> </div>
+          </div>
+          <img src="assets/spisok.svg" class="spisok">
         </div>
-        <img class="face3" src="assets/face3.png">
+        <div class="fon3"><img class="face3" src="assets/face3.png"></div>
       </div>
     </div>
     <div class="page-win">
       <div class="block4">
         <img class="face4" src="assets/face4.png">
+        <div class="pal-two"></div>
         <div class="zagblock4">Строгая 
           коллекция
           <div class="opblock4">Эллегантные платья, классические 
             брючные костюмы добавят вам
             и вашей фигуре больше шарма</div>
-          <div class="link button win last">Смотреть</div>
+          <button class="link button win last">Смотреть</button>
         </div>
       </div>
     </div>
@@ -418,7 +472,7 @@ letter-spacing: 0.12em;
           <img src="assets/3.jpg">
           <p class="text">Косметичка</p>
           <p class="price">1999</p>
-          <div class="button link sale">Купить</div>
+          <button class="button link sale">Купить</button>
         </div>
         <div class="box">
           <img src="assets/4.jpg">
@@ -426,12 +480,11 @@ letter-spacing: 0.12em;
           <p class="price">5000</p>
         </div>
       </div>
-      <div class="link button win else">Смотреть ещё</div>
+      <button class="link button win else">Смотреть ещё</button>
     </div>
   </main>
   <footer class="footer">
-    <nav class="navigation">
-      <div class="fotfon"></div>
+    <nav class="navigation ogr">
       <ul class="link-list fof">
         <li><a href="/" class="link logo">Dolly</a></li>
         <li><a href="#" class="link back">Доставка</a></li>
