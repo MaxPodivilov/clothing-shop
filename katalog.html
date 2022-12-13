@@ -5,12 +5,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Модная женская одежда</title>
+  <base href="https://maxpodivilov.github.io/clothing-shop/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/maxshuty/accessible-web-components/dist/simpleRange.min.js"></script>
   <style>
     * {
       box-sizing: border-box;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+    color: inherit;
+    font-size: 1em;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
     }
 
     html {
@@ -161,7 +176,6 @@
     }
     .kataprice {
         margin-top: 50px;
-        margin-bottom: 20px;
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
@@ -230,6 +244,16 @@
       min-height: 100px;
       margin: 0 auto;
     }
+    label {
+    font: 1rem 'Fira Sans', sans-serif;
+    }
+
+    input {
+    margin: .4rem;
+    }
+    .vibor {
+      font-size: 14pxs;
+    }
     </style>
 </head>
 
@@ -238,10 +262,10 @@
     <header class="header">
       <nav class="navigation">
         <ul class="link-list">
-          <li><a href="index.html" class="link logo">Dolly</a></li>
-          <li><a href="#" class="link">Одежда</a></li>
-          <li><a href="#" class="link">Обувь</a></li>
-          <li><a href="#" class="link">Аксессуары</a></li>
+          <h1><a href="index" class="link logo">Dolly</a></h1>
+          <li><a href="katalog" class="link">Одежда</a></li>
+          <li><a href="katalog" class="link">Обувь</a></li>
+          <li><a href="katalog" class="link">Аксессуары</a></li>
         </ul>
       </nav>
       <div class="profile">
@@ -268,19 +292,32 @@
                 <div class="name">Ботильоны</div>
                 <div class="name">Сапоги</div>
                 <div class="kataprice"> ЦЕНА
-                    <img class="pricefilter" src="assets/kataprice.PNG">
-                    <div>От<u>2000</u>до<u>8000</u></div>
+                    <range-selector min-range="0" max-range="8000" />
                 </div>
                 <div class="brend"> БРЕНД
                     <input>
                     </div>
                 <div class="spisokbrend">
-                    <div class="brendvib">Alpina</div>
-                    <div class="brendvib">AMORİSS</div>
-                    <div class="brendvib">ALPİNO</div>
-                    <div class="brendvib">ANALPA</div>
-                    <img class="gal" src="assets/Shape.svg">
-                    <img class="gal2" src="assets/Shape.svg">
+                  <fieldset>
+                    <legend>Выбор бренда</legend>
+                
+                    <div class="vibor">
+                      <input type="checkbox" id="scales" name="scales" checked>
+                      <label for="scales">Alpina</label>
+                    </div>
+                    <div class="vibor">
+                      <input type="checkbox" id="horns" name="horns">
+                      <label for="horns">AMORİSS</label>
+                    </div>
+                    <div class="vibor">
+                      <input type="checkbox" id="horns" name="horns">
+                      <label for="horns">ALPİNO</label>
+                    </div>
+                    <div class="vibor">
+                      <input type="checkbox" id="horns" name="horns">
+                      <label for="horns">ANALPA</label>
+                    </div>
+                </fieldset>
                 </div>
                 <button class="link" href="#">Смотреть ещё</button>
             </div>
@@ -337,9 +374,9 @@
   <footer class="footer">
     <nav class="navigation ogr">
       <ul class="link-list fof">
-        <li><a href="/" class="link logo">Dolly</a></li>
-        <li><a href="#" class="link back">Доставка</a></li>
-        <li><a href="#" class="link">Оплата</a></li>
+        <li><a href="index" class="link logo">Dolly</a></li>
+        <li><a href="katalog" class="link back">Доставка</a></li>
+        <li><a href="shop" class="link">Оплата</a></li>
         <li><a href="#" class="link">Контакты</a></li>
         <li><a href="#" class="link">Вопросы</a></li>
         <li><a href="#" class="link">Отзывы</a></li>

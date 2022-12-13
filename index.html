@@ -14,6 +14,19 @@
     * {
       box-sizing: border-box;
     }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+    color: inherit;
+    font-size: 1em;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    }
 
     html {
       font-family: 'Open Sans', sans-serif;
@@ -106,8 +119,13 @@
       text-decoration: none;
       background-color: rgba(0, 0, 0, 0.1);
     }
+    .button:hover,
+    .button:focus-visible {
+      text-decoration: none;
+      background-color: rgba(62, 57, 57, 0.488);
+      cursor: pointer;
+    }
     .page {
-      
       position: relative;
       width: 100%;
       height: 100vh;
@@ -331,7 +349,7 @@ letter-spacing: 0.12em;
       color: #C4C4C4;
     }
     .sale {
-      width: 177px;
+      width:fit-content;
     }
     .else {
       white-space: nowrap;
@@ -379,6 +397,11 @@ letter-spacing: 0.12em;
       bottom: 320px;
       z-index: 2;
     }
+    .sale { visibility: hidden; }
+   .box:hover .sale {
+    visibility: visible;
+    transition-delay: 0,5ms;
+   }
   </style>
 </head>
 
@@ -387,7 +410,7 @@ letter-spacing: 0.12em;
     <header class="header">
       <nav class="navigation">
         <ul class="link-list">
-          <li><a href="index" class="link logo">Dolly</a></li>
+          <h1><a href="index" class="link logo">Dolly</a></h1>
           <li><a href="katalog" class="link">Одежда</a></li>
           <li><a href="katalog" class="link">Обувь</a></li>
           <li><a href="katalog" class="link">Аксессуары</a></li>
@@ -406,11 +429,13 @@ letter-spacing: 0.12em;
         <img src="assets/dolly.svg" alt="">
       </div>
       <div class="body">
-        <div class="zag">Модная женская одежда
+        <div class="zag"><h2>Модная женская одежда</h2>
+          <form action="katalog">
           <button class="link button" href="katalog">Смотреть</button>
+          </form>
         </div>
       </div>
-      <a class="link strelki" href="#"><img src="assets/strelka.svg" alt=""></a>
+      <a class="link strelki" href="#block3"><img src="assets/strelka.svg" alt=""></a>
     </div>
     <div class="page-win">
       <div class="winter">
@@ -418,9 +443,11 @@ letter-spacing: 0.12em;
       </div>
       <div class="bodywin">
         <img class="face2" src="assets/face2.png" alt="">
-        <div class="zagwinter">Зимний lookbook
+        <div class="zagwinter"><h3>Зимний lookbook</h3>
           <div class="coll">Зимняя коллекция от лучших брендов</div>
-            <button class="link button win" href="#">Смотреть</button>
+            <form action="katalog">
+            <button class="link button win" href="katalog">Смотреть</button>
+            </form>
         </div>
       </div>
     </div>
@@ -428,8 +455,8 @@ letter-spacing: 0.12em;
       <div class="block3">
         <div class="pal"></div>
         <div class="d"></div>
-        <div class="zagblock3">Коллекция<br>
-          на каждый день
+        <div class="zagblock3"><h3>Коллекция<br>
+          на каждый день</h3>
           <div class="opblock3">Полна легкости и простоты.
             Удобная, уютная одежда сделает
             каждый день чуточку приятнее,
@@ -448,17 +475,19 @@ letter-spacing: 0.12em;
       <div class="block4">
         <img class="face4" src="assets/face4.png">
         <div class="pal-two"></div>
-        <div class="zagblock4">Строгая 
-          коллекция
+        <div class="zagblock4"><h3>Строгая 
+          коллекция</h3>
           <div class="opblock4">Эллегантные платья, классические 
             брючные костюмы добавят вам
             и вашей фигуре больше шарма</div>
-          <button class="link button win last">Смотреть</button>
+          <form action="katalog">
+          <button class="link button win last" href="katalog" >Смотреть</button>
+          </form>
         </div>
       </div>
     </div>
     <div class="page-win"> 
-      <div class="name">Популярные товары</div>
+      <div class="name"><h3>Популярные товары</h3></div>
       <div class="mag">
         <div class="box">
           <img src="assets/1.jpg">
@@ -474,7 +503,9 @@ letter-spacing: 0.12em;
           <img src="assets/3.jpg">
           <p class="text">Косметичка</p>
           <p class="price">1999</p>
-          <button class="button link sale">Купить</button>
+          <form action="shop">
+          <button class="button link sale" href="shop">Купить</button>
+          </form>
         </div>
         <div class="box">
           <img src="assets/4.jpg">
@@ -482,13 +513,15 @@ letter-spacing: 0.12em;
           <p class="price">5000</p>
         </div>
       </div>
-      <button class="link button win else">Смотреть ещё</button>
+      <form action="katalog">
+      <button class="link button win else" href="katalog">Смотреть ещё</button>
+      </form>
     </div>
   </main>
   <footer class="footer">
     <nav class="navigation ogr">
       <ul class="link-list fof">
-        <li><a href="/" class="link logo">Dolly</a></li>
+        <li><a href="index" class="link logo">Dolly</a></li>
         <li><a href="#" class="link back">Доставка</a></li>
         <li><a href="#" class="link">Оплата</a></li>
         <li><a href="#" class="link">Контакты</a></li>

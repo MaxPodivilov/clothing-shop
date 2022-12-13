@@ -5,12 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Модная женская одежда</title>
+  <base href="https://maxpodivilov.github.io/clothing-shop/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+    color: inherit;
+    font-size: 1em;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
     }
 
     html {
@@ -185,7 +199,7 @@
         flex-direction: column;
         
     }
-    .sale {
+    .sales {
         font-weight: 600;
         font-size: 40px;
         line-height: 54px;
@@ -197,8 +211,8 @@
     display: flex;
    }
    .like {
-    margin-left: 45px;
-    margin-right: 15px;
+    margin-left: 34px;
+    
    }
    .sizelist {
     display: flex;
@@ -270,7 +284,7 @@
     .page-win {
       position: relative;
       width: 100%;
-      margin-top: 150px;
+      margin-top: 120px;
     }
     .mag {
       display: flex;
@@ -306,7 +320,7 @@
       line-height: 27px;
       color: #C4C4C4;
     }
-    .sale {
+    .sales {
       width: 180px;
     }
     .else {
@@ -320,6 +334,29 @@
       background: white;
       color: black;
     }
+    .button:hover,
+    .button:focus-visible {
+      text-decoration: none;
+      background-color: rgba(62, 57, 57, 0.488);
+      cursor: pointer;
+    }
+    .sale { visibility: hidden; }
+   .box:hover .sale {
+    visibility: visible;
+    transition-delay: 0,5ms;
+   }
+   .favorite {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    text-transform: none;
+   }
+   ul,
+   li{
+    list-style-type:none;
+    margin: 0px;
+    padding: 0px;
+   }
   </style>
 </head>
 
@@ -328,10 +365,10 @@
     <header class="header">
       <nav class="navigation">
         <ul class="link-list">
-          <li><a href="index.html" class="link logo">Dolly</a></li>
-          <li><a href="#" class="link">Одежда</a></li>
-          <li><a href="page2.html" class="link">Обувь</a></li>
-          <li><a href="#" class="link">Аксессуары</a></li>
+          <h1><a href="index" class="link logo">Dolly</a></h1>
+          <li><a href="katalog" class="link">Одежда</a></li>
+          <li><a href="katalog" class="link">Обувь</a></li>
+          <li><a href="katalog" class="link">Аксессуары</a></li>
         </ul>
       </nav>
       <div class="profile">
@@ -354,35 +391,39 @@
                 </div>
             </div>
             <div class="spisokop">
-                <div class="zagsale">Туфли Лакированные</div>
-                <div class="sale">4999 ₽</div>
+                <div class="zagsale"><h2>Туфли Лакированные</h2></div>
+                <div class="sales">4999 ₽</div>
                 <div class="reiting">
                     <img src="assets/Star.svg" alt="">
                     <img src="assets/Star.svg" alt="">
                     <img src="assets/Star.svg" alt="">
                     <img src="assets/Star.svg" alt="">
                     <img src="assets/Star2.svg" class="fivestar" alt="">
+                    <a class="link fav" href="#">
                     <img src="assets/heart.svg" class="like" alt="">
-                    <p>в избранное</p>
+                    <p class="favorite">в избранное</p>
+                    </a>
                 </div>
-                <div class="sizelist">
-                    <p>Размеры:</p>
-                    <p class="size32">32</p>
-                    <p class="size34">34</p>
-                    <p class="size36">36</p>
-                    <p class="size38">38</p>
-                </div>
+                <ul class="sizelist">
+                    <li>Размеры:</li>
+                    <li class="size32">32</li>
+                    <li class="size34">34</li>
+                    <li class="size36">36</li>
+                    <li class="size38">38</li>
+                </ul>
                 <div><a href="#" class="table">Таблица размеров</a></div>
-                <div class="colorlist">
-                    <div>Состав</div>
-                    <div class="color grey"></div>
-                    <div class="color white"></div>
-                    <div class="color black"></div>
-                </div>
+                <ul class="colorlist">
+                    <li>Состав</li>
+                    <li class="color grey"></li>
+                    <li class="color white"></li>
+                    <li class="color black"></li>
+                </ul>
                 <div class="opis">Состав: Искусственная замша</div>
                 <div class="opis">Сезон: Демисезон</div>
                 <a class="table pod" href="#">Подробнее</a>
-                <button class="buttonbuy">Купить</button>
+                <form action="shop">
+                <button class="buttonbuy button link">Купить</button>
+                </form>
             </div>
         </div>
     </div>
@@ -403,7 +444,9 @@
             <img src="assets/3.jpg">
             <p class="text">Косметичка</p>
             <p class="price">1999</p>
-            <button class="button link sale">Купить</button>
+            <form action="shop">
+              <button class="button link sale" href="shop">Купить</button>
+            </form>
           </div>
           <div class="box">
             <img src="assets/4.jpg">
@@ -411,7 +454,9 @@
             <p class="price">5000</p>
           </div>
         </div>
-        <button class="link button win else">Смотреть ещё</button>
+        <form action="katalog">
+          <button class="link button win else" href="katalog">Смотреть ещё</button>
+        </form>
       </div>
     </main>
     <footer class="footer">
