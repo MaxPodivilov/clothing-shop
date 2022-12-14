@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Модная женская одежда</title>
-  <base href="https://maxpodivilov.github.io/clothing-shop/">
-  <base href="C:\Users\Leniole\Desktop\Git\clothing-shop\clothing-shop">
+  <!-- <base href="https://maxpodivilov.github.io/clothing-shop/"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -85,7 +84,6 @@
     }
 
     .link {
-      font-weight: 0.8rem;
       text-transform: uppercase;
       padding: 9px 24px;
       text-decoration: none;
@@ -181,6 +179,7 @@
     .strelki {
       position: absolute;
       bottom: 0px;
+      z-index: 5;
     }
     .winter {
       position: absolute;
@@ -452,7 +451,7 @@ letter-spacing: 0.12em;
       </div>
     </div>
     <div class="page-win">
-      <div class="block3">
+      <div class="block3" id="block3">
         <div class="pal"></div>
         <div class="d"></div>
         <div class="zagblock3"><h3>Коллекция<br>
@@ -493,11 +492,17 @@ letter-spacing: 0.12em;
           <img src="assets/1.jpg">
           <p class="text">Рюкзак кантри</p>
           <p class="price">2999</p>
+          <form action="shop">
+            <button class="button link sale" href="shop">Купить</button>
+            </form>
         </div>
         <div class="box">
           <img src="assets/2.jpg">
           <p class="text">Туфли лакированные</p>
           <p class="price">4999</p>
+          <form action="shop">
+            <button class="button link sale" href="shop">Купить</button>
+            </form>
         </div>
         <div class="box">
           <img src="assets/3.jpg">
@@ -511,6 +516,9 @@ letter-spacing: 0.12em;
           <img src="assets/4.jpg">
           <p class="text">Часы наручные</p>
           <p class="price">5000</p>
+          <form action="shop">
+            <button class="button link sale" href="shop">Купить</button>
+            </form>
         </div>
       </div>
       <form action="katalog">

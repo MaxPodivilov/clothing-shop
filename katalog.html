@@ -85,7 +85,6 @@
     }
 
     .link {
-      font-weight: 0.8rem;
       text-transform: uppercase;
       padding: 9px 24px;
       text-decoration: none;
@@ -130,14 +129,14 @@
         position: relative;
         background-image: url(assets/katalogstrelka.png);
         background-repeat: no-repeat;
-        background-position: 110px 8px;
+        background-position: 117px 17px;
     }
     .namelist {
         width: 196px;
         height: 100%;
         display: flex;
         flex-direction: column;
-        row-gap: 20px;
+        row-gap: 5px;
         margin-right: 90px;
         font-weight: 400;
         font-size: 16px;
@@ -151,8 +150,8 @@
     }
     .selector{
         background: #D9E3EF;
-        padding: 5px;
-        padding-left: 0px;   
+        padding: 10px;
+        
     }
     .tovarlist {
         display: flex;
@@ -200,15 +199,11 @@
     }
     input {
         
-        margin-top: 10px;
+        margin-top: 5px;
     }
     .spisokbrend {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        align-items: center;
-        column-gap: 40px;
-        margin-left: 20px;
+      position: relative;
+      
     }
     .gal {
         position: absolute;
@@ -225,6 +220,7 @@
     button {
         margin-top: 50px;
         background: white;
+        width: 100%;
         }
     .footer {
       position: relative;
@@ -246,6 +242,7 @@
     }
     label {
     font: 1rem 'Fira Sans', sans-serif;
+    font-size: 14px;
     }
 
     input {
@@ -253,6 +250,29 @@
     }
     .vibor {
       font-size: 14pxs;
+    }
+    ul,
+   li{
+    list-style-type:none;
+    margin: 0px;
+    padding: 10px;
+   }
+   li:hover {
+    background: #D9E3EF;
+   }
+   .poisk {
+    position: relative;
+    left: -6px;
+   }
+   .button:hover,
+    .button:focus-visible {
+      text-decoration: none;
+      background-color: rgba(62, 57, 57, 0.488);
+      cursor: pointer;
+    }
+    a {
+      outline: none;
+      text-decoration: none;
     }
     </style>
 </head>
@@ -278,24 +298,25 @@
     </header>
     <div class="page">
         <div class="katalog">
-            <div class="namelist">КАТЕГОРИИ
-                <div class="name">Босоножки</div>
-                <div class="name">Балетки</div>
-                <div class="name">Сабо</div>
-                <div class="name">Сандалии</div>
-                <div class="name">Сабо и мюли</div>
-                <div class="name">Слипоны</div>
-                <div class="name">Домашняя обувь</div>
-                <div class="name selector">Туфли</div>
-                <div class="name">Эспадрильи</div>
-                <div class="name">Ботинки</div>
-                <div class="name">Ботильоны</div>
-                <div class="name">Сапоги</div>
+            <ul class="namelist">КАТЕГОРИИ
+                <li class="name">Босоножки</li>
+                <li class="name">Балетки</li>
+                <li class="name">Сабо</li>
+                <li class="name">Сандалии</li>
+                <li class="name">Сабо и мюли</li>
+                <li class="name">Слипоны</li>
+                <li class="name">Домашняя обувь</li>
+                <li class="name selector">Туфли</li>
+                <li class="name">Эспадрильи</li>
+                <li class="name">Ботинки</li>
+                <li class="name">Ботильоны</li>
+                <li class="name">Сапоги</li>
                 <div class="kataprice"> ЦЕНА
-                    <range-selector min-range="0" max-range="8000" />
+                    <range-selector min-range="0" max-range="8000" 
+                    slider-color="#D9E3EF" />
                 </div>
                 <div class="brend"> БРЕНД
-                    <input>
+                    <input class="poisk" type="search" placeholder="Введите название бренда">
                     </div>
                 <div class="spisokbrend">
                   <fieldset>
@@ -319,54 +340,66 @@
                     </div>
                 </fieldset>
                 </div>
-                <button class="link" href="#">Смотреть ещё</button>
-            </div>
+                <form action="">
+                <button class="link button" href="#">Смотреть ещё</button>
+                </form>
+            </ul>
         </div>
         <div class="tovarlist">
             <div class="tovar">
+              <a href="shop">
                 <img class="tovarfoto" src="assets/shoes1.jpg">
                 <p class="tovarname">туфли лакированные</p>
                 <p class="tovarprice">4999 ₽</p>
+              </a>
             </div>
             <div class="tovar">
+              <a href="shop">
                 <img class="tovarfoto" src="assets/shoes2.jpg"">
                 <p class="tovarname">туфли без каблука</p>
-                <p class="tovarprice">5999 ₽</p>
+                <p class="tovarprice">5999 ₽</p></a>
             </div>
             <div class="tovar">
+              <a href="shop">
                 <img class="tovarfoto" src="assets/shoes3.jpg">
                 <p class="tovarname">туфли 13 сантиметров</p>
-                <p class="tovarprice">3999 ₽</p>
+                <p class="tovarprice">3999 ₽</p></a>
             </div>
             <div class="tovar">
+              <a href="shop">
                 <img class="tovarfoto" src="assets/shoes4.jpg">
                 <p class="tovarname">туфли жёлтый лак</p>
-                <p class="tovarprice">3999 ₽</p>
+                <p class="tovarprice">3999 ₽</p></a>
             </div>
             <div class="tovar">
+              <a href="shop">
                 <img class="tovarfoto" src="assets/shoes5.jpg">
                 <p class="tovarname">туфли пантера</p>
-                <p class="tovarprice">4999 ₽</p>
+                <p class="tovarprice">4999 ₽</p></a>
             </div>
             <div class="tovar">
+              <a href="shop">
                 <img class="tovarfoto" src="assets/shoes6.jpg">
                 <p class="tovarname">туфли с кисточками</p>
-                <p class="tovarprice">6599 ₽</p>
+                <p class="tovarprice">6599 ₽</p></a>
             </div>
             <div class="tovar">
+              <a href="shop">
                 <img class="tovarfoto" src="assets/shoes7.jpg">
                 <p class="tovarname">туфли нарядные</p>
-                <p class="tovarprice">8999 ₽</p>
+                <p class="tovarprice">8999 ₽</p></a>
             </div>
             <div class="tovar">
+              <a href="shop">
                 <img class="tovarfoto" src="assets/shoes8.jpg">
                 <p class="tovarname">туфли полосатые</p>
-                <p class="tovarprice">4599 ₽</p>
+                <p class="tovarprice">4599 ₽</p></a>
             </div>
             <div class="tovar">
+              <a href="shop">
                 <img class="tovarfoto" src="assets/shoes 9.jpg ">
                 <p class="tovarname">туфли розовые, лак</p>
-                <p class="tovarprice">4799 ₽</p>
+                <p class="tovarprice">4799 ₽</p></a>
             </div>
         </div>
     </div>

@@ -33,12 +33,15 @@
     }
 
     body {
+      position: relative;
+      width: 100%;
+      height: 100%;
       margin: 0;
       padding: 0;
     }
 
     .content {
-      width: 1184px;
+      max-width: 1184px;
       min-height: 100vh;
       margin: 0 auto;
       position: relative;
@@ -48,11 +51,13 @@
       display: flex;
       width: 1184px;
       height: 41px;
-      margin-top: 50px;
       align-items: center;
       justify-content: space-between;
       position: fixed;
       z-index: 3;
+      margin: 0 auto;
+      left: 440px;
+      top:50px;
     }
 
     .navigation {
@@ -84,7 +89,6 @@
     }
 
     .link {
-      font-weight: 0.8rem;
       text-transform: uppercase;
       padding: 9px 24px;
       text-decoration: none;
@@ -122,7 +126,8 @@
       
       position: relative;
       width: 100%;
-      height: 100vh;
+      min-height: 1000px;
+     
       
     }
     .background2 {
@@ -131,11 +136,11 @@
       align-items: center;
       justify-content: center;
       width: 100vw;
-      height: 1010px;
+      height: 50%;
       top: 0;
-      left: 0;
-      transform: translateX(-68%);      
-      background:linear-gradient(90deg, transparent 0%, transparent 48%, #D9E3EF 48%, #D9E3EF 100%);
+      left: 50%; 
+      transform: translateX(-50%); 
+      background:linear-gradient(90deg, #D9E3EF 0%, #D9E3EF 48%, transparent 48%, transparent 100%);
     }
     
     .footer {
@@ -177,10 +182,13 @@
     }
     .salepage {
         position: relative;
-        top: 239px;
+        width: 1184px;
+        padding-top: 200px;
         display: flex;
         justify-content: left;
         column-gap: 80px;
+        margin: 0 auto;
+       
     }
     .photospisok {
         display: flex;
@@ -357,11 +365,17 @@
     margin: 0px;
     padding: 0px;
    }
+   .fav {
+    display: flex;
+    column-gap: 5px;
+   }
+   p {
+    margin: 5px;
+   }
   </style>
 </head>
 
 <body> 
-  <main class="content">
     <header class="header">
       <nav class="navigation">
         <ul class="link-list">
@@ -379,7 +393,7 @@
         </ul>
       </div>
     </header>
-    <div class="page">
+    
         <div class="background2"></div>
         <div class="salepage">
             <div class="photobig">
@@ -400,8 +414,8 @@
                     <img src="assets/Star.svg" alt="">
                     <img src="assets/Star2.svg" class="fivestar" alt="">
                     <a class="link fav" href="#">
-                    <img src="assets/heart.svg" class="like" alt="">
-                    <p class="favorite">в избранное</p>
+                        <img src="assets/heart.svg" class="like" alt="">
+                        <p class="favorite">в избранное</p>
                     </a>
                 </div>
                 <ul class="sizelist">
@@ -411,7 +425,7 @@
                     <li class="size36">36</li>
                     <li class="size38">38</li>
                 </ul>
-                <div><a href="#" class="table">Таблица размеров</a></div>
+                <a href="#" class="table">Таблица размеров</a>
                 <ul class="colorlist">
                     <li>Состав</li>
                     <li class="color grey"></li>
@@ -434,11 +448,17 @@
             <img src="assets/1.jpg">
             <p class="text">Рюкзак кантри</p>
             <p class="price">2999</p>
+            <form action="shop">
+              <button class="button link sale" href="shop">Купить</button>
+            </form>
           </div>
           <div class="box">
             <img src="assets/2.jpg">
             <p class="text">Туфли лакированные</p>
             <p class="price">4999</p>
+            <form action="shop">
+              <button class="button link sale" href="shop">Купить</button>
+            </form>
           </div>
           <div class="box">
             <img src="assets/3.jpg">
@@ -452,13 +472,15 @@
             <img src="assets/4.jpg">
             <p class="text">Часы наручные</p>
             <p class="price">5000</p>
+            <form action="shop">
+              <button class="button link sale" href="shop">Купить</button>
+            </form>
           </div>
         </div>
         <form action="katalog">
           <button class="link button win else" href="katalog">Смотреть ещё</button>
         </form>
       </div>
-    </main>
     <footer class="footer">
       <nav class="navigation ogr">
         <ul class="link-list fof">
