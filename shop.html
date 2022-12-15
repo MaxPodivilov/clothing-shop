@@ -53,11 +53,10 @@
       height: 41px;
       align-items: center;
       justify-content: space-between;
-      position: fixed;
+      position: relative;
       z-index: 3;
       margin: 0 auto;
-      left: 440px;
-      top:50px;
+      padding-top: 50px;
     }
 
     .navigation {
@@ -294,6 +293,13 @@
       width: 100%;
       margin-top: 120px;
     }
+    .win {
+      margin-top: 40px;
+      color: #373737;
+      background: white;
+      box-shadow: none;
+      border: 1px solid #000000 ;
+    }
     .mag {
       display: flex;
       justify-content: center;
@@ -307,7 +313,6 @@
     }
     .button {
       width: 212px;
-      background: #373737;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       font-size: 16px;
       line-height: 22px;
@@ -331,21 +336,11 @@
     .sales {
       width: 180px;
     }
-    .else {
-      white-space: nowrap;
-      text-align: center;
-      margin: 0% auto;
-      margin-top: 75px;
-      width: auto;
-      display: flex;
-      margin-bottom: 160px;
-      background: white;
-      color: black;
-    }
+    
     .button:hover,
     .button:focus-visible {
       text-decoration: none;
-      background-color: rgba(62, 57, 57, 0.488);
+      background-color: rgba(248, 239, 239, 0.488);
       cursor: pointer;
     }
     .sale { visibility: hidden; }
@@ -359,6 +354,19 @@
     font-size: 16px;
     text-transform: none;
    }
+   .else {
+      white-space: nowrap;
+      text-align: center;
+      margin: 0% auto;
+      margin-top: 75px;
+      width: auto;
+      display: flex;
+      margin-bottom: 160px;
+      background: white;
+      color: black;
+      box-shadow: none;
+      
+    }
    ul,
    li{
     list-style-type:none;
@@ -478,7 +486,7 @@
           </div>
         </div>
         <form action="katalog">
-          <button class="link button win else" href="katalog">Смотреть ещё</button>
+          <button class="button win else" href="katalog">Смотреть ещё</button>
         </form>
       </div>
     <footer class="footer">
